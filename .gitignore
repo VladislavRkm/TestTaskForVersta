@@ -1,0 +1,17 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/TestTaskForVersta/FileContentIndex
+/.vs
+/backend/CargoDelivery.API/bin/Debug/net8.0
+/backend/CargoDelivery.API/.vs
+/backend/CargoDelivery.API/obj
+/backend/CargoDelivery.Application/bin/Debug/net8.0
+/backend/CargoDelivery.Application/obj
+/backend/CargoDelivery.Core/bin/Debug/net8.0
+/backend/CargoDelivery.Core/obj
+/backend/CargoDelivery.DataAccess/bin/Debug/net8.0
+/backend/CargoDelivery.DataAccess/obj
+/frontend/node_modules
+/frontend
