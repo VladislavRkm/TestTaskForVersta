@@ -16,15 +16,18 @@
 
 ___
 ## Стек технологий:
--ASP.NET 8 на backend
--React.JS, Next.JS, Ant Design
--Entity Framework
--PostgreSQL
--Docker
+
+* ASP.NET 8 на backend
+* React.JS, Next.JS, Ant Design
+* Entity Framework
+* PostgreSQL
+* Docker
 ___
  Я решил написать данное приложение с использованием луковой(чистой) архитектуры. Как известно, всё начинается с доменных сущностей:
+ 
  ![image](https://github.com/VladislavRkm/TestTaskForVersta/assets/113041279/4af54062-a543-42bd-bcbb-fc0799627fb9)
  (Все слои и взаимодействия можно увидеть в структкуре проекта.)
+ 
  Не буду тянуть. Когда все сущности, модели, контекст, репозитории, интерфейсы, сервисы и контроллеры были написаны, я подключил базу данных PostgreSQL и поднял её в Docker-контейнере.
  ![image](https://github.com/VladislavRkm/TestTaskForVersta/assets/113041279/0785811f-eac8-4ee0-a266-43d88a19e48d)
  ![image](https://github.com/VladislavRkm/TestTaskForVersta/assets/113041279/608d291e-1f46-4b99-b3b5-e36904ec9453)
