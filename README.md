@@ -96,6 +96,39 @@ ___
 
 Из базы данных запись удаляется соответственно:
 ![image](https://github.com/user-attachments/assets/2c8d6622-7766-4b8b-a012-65ff7f3dc977)
+___
+Теперь проверим синхронизацию бэкенда и фронтенда. Создадим какой-нибудь заказ через Swagger UI.
+![image](https://github.com/user-attachments/assets/2cbc660b-5a27-46a6-ae19-ec1f84619986)
+Обновим страницу и увидим заказ на нашей страничке:
+
+![image](https://github.com/user-attachments/assets/21bf185a-d473-435b-8eca-c5408e37c556)
+___
+Теперь в обратную сторону, проверим как работают http-запросы с заказами, созданными через Razor Pages.
+![image](https://github.com/user-attachments/assets/37ecdbee-ee90-4d59-b253-8531e0474239)
+![image](https://github.com/user-attachments/assets/424f9451-5918-47b9-9deb-8d256ead09a7)
+
+Выполняем GET-запрос в Swagger UI и он нам возвращает наши заказы.
+![image](https://github.com/user-attachments/assets/caebeab5-1699-4ce3-a430-9eac87b128dc)
+
+Остальные запросы выполнять не будем, так как очевидно, что они будут работать.
+___
+Подведём итоги.
+Технические требования к реализации:
+
+- [x] Форма заказа с обязательными для заполнения полями
+- [x] Форма для отображения сформированных заказов с автоматически сгенерированным номером для каждого заказа
+- [x] Форма для просмотра заказа в режиме чтения
+
+Технологии:
+
+- [x] ASP.NET 8 на backend
+- [ ] React.JS (предпочтительно) на front
+- [x] Razor Pages на front
+- [x] Entity Framework
+- [x] Docker (дополнительно)
+- [x] PostgreSQL
+
+
 
 
 
