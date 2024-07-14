@@ -15,3 +15,9 @@
 /backend/CargoDelivery.DataAccess/obj
 /frontend/node_modules
 /frontend
+/CargoDeliveryFront/CargoDeliveryFront/bin/Debug/net8.0
+/CargoDeliveryFront/CargoDeliveryFront/obj
+/CargoDeliveryFront/CargoDeliveryFront/wwwroot
+/backend.rar
+/CargoDeliveryFront.rar
+/CargoDeliveryFront/.vs
