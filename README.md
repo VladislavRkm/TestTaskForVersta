@@ -79,6 +79,7 @@ ___
 
 Нажимаем кнопку закрыть и всё возвращается на свои места:
 ![image](https://github.com/user-attachments/assets/f5cf7bea-d3f1-4273-944c-667c6b5081ec)
+___
 
 Теперь отредактируем наш заказ:
 ![image](https://github.com/user-attachments/assets/bb6d4ccb-7ead-4db0-84fd-f5c43e989c4c)
@@ -88,6 +89,14 @@ ___
 
 В базе данных изменения также отображаются:
 ![image](https://github.com/user-attachments/assets/07975d8e-81c7-4451-b370-fc715e1b9bd8)
+___
+
+Давайте теперь удалим наш заказ. Для этого воспользуемся кнопкой "Удалить".
+![image](https://github.com/user-attachments/assets/feec350c-2542-4a53-b6b8-d4585a98dc51)
+
+Из базы данных запись удаляется соответственно:
+![image](https://github.com/user-attachments/assets/2c8d6622-7766-4b8b-a012-65ff7f3dc977)
+
 
 
 
