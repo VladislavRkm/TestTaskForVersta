@@ -64,21 +64,24 @@ ___
 ![image](https://github.com/user-attachments/assets/5b2ec1cb-35a7-4e27-8d13-a933d150d421)
 ___
 Создадим новый заказ, нажимаем кнопку "Отправить". Возращаемся на главную станицу и видим, что заказ отобразился.
-![image](https://github.com/user-attachments/assets/88bbd53e-9e73-4148-94bd-a90042cab887)
-
+![image](https://github.com/user-attachments/assets/1cd30de6-62d4-43db-870e-eb0c99e0ba12)
+![image](https://github.com/user-attachments/assets/ba0b8325-d65a-41b2-a635-03ffb5a38973)
 
 Проверим его наличие в БД:
-![image](https://github.com/user-attachments/assets/01652685-38dd-4889-9914-1fe013c8ad97)
+![image](https://github.com/user-attachments/assets/224a4216-a08d-4151-a4bb-fa5fa5285177)
+
 Видим, что заказ отобразился и все данные совпадают с тем, что отражено на странице.
 ___
 Перейдём к тестированию кнопок "Просмотр заказа", "Редактировать", "Удалить":
 
 Просмотр осуществляется в режиме чтения. Открываем заказ, попробуем стереть введённые данные:
-![image](https://github.com/user-attachments/assets/15cce1ad-5c84-4558-a33b-848bfbe6c9db)
+![image](https://github.com/user-attachments/assets/bf404dc5-5cee-4ffb-9ea8-9989e7076f4a)
+
 Нажимаем кнопку закрыть и всё возвращается на свои места:
-![image](https://github.com/user-attachments/assets/ac5d1f96-7c36-4644-9ac4-ae1fdd7bdd77)
+![image](https://github.com/user-attachments/assets/f5cf7bea-d3f1-4273-944c-667c6b5081ec)
+
 Теперь отредактируем наш заказ:
-![image](https://github.com/user-attachments/assets/77ef5c3a-c8c4-45ed-85e1-df245a964fc6)
+
 
 
 
