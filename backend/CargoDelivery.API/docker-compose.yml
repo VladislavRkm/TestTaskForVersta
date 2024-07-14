@@ -3,9 +3,9 @@
     image: postgres:latest
     container_name: postgres
     environment:
-      POSTGRES_DB: "CargoDelivery"
+      POSTGRES_DB: "C_delivery"
       POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "123"
+      POSTGRES_PASSWORD: "postgres"
     volumes:
     - postgres-data:/var/lib/postgresql/data
 

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CargoDelivery.Core", "..\Ca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CargoDelivery.DataAccess", "..\CargoDelivery.DataAccess\CargoDelivery.DataAccess.csproj", "{D9E9F7C0-6649-4DF0-B236-57748F306AC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CargoDelivery.Application", "..\CargoDelivery.Application\CargoDelivery.Application.csproj", "{60CC839E-94A5-4F41-88C8-EACFED9FC89D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CargoDelivery.Application", "..\CargoDelivery.Application\CargoDelivery.Application.csproj", "{60CC839E-94A5-4F41-88C8-EACFED9FC89D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

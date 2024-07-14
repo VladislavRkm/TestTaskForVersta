@@ -56,6 +56,10 @@ public class Order
         {
             error = "Recipient's address can not be empty or longer than 250 symbols";
         }
+        else if (weight <= 0)
+        {
+            error = "Cargo's weight can not be less than or equal to zero";
+        }
         var order = new Order(id, senderCity, senderAddress, recipientCity, recipientAddress, weight, pickUpDate);
         return (order, error);
     }

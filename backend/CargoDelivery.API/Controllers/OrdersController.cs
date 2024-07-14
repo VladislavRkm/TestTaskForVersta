@@ -44,7 +44,7 @@ public class OrdersController : ControllerBase
         return Ok(orderId);
     }
     [HttpPut("{id:guid}")]
-    public async Task<ActionResult<Guid>> UpdateOrder(Guid id, string orderNumber, [FromBody] OrderRequest orderRequest)
+    public async Task<ActionResult<Guid>> UpdateOrder(Guid id, [FromBody] OrderRequest orderRequest)
     {
         var orderId = await _orderService.UpdateOrder(id, orderRequest.SenderCity, orderRequest.SenderAddress, orderRequest.RecipientCity, orderRequest.RecipientAddress, orderRequest.Weight, orderRequest.PickUpDate);
         return Ok(orderId);
