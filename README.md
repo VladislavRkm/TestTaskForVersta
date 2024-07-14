@@ -84,6 +84,10 @@ ___
 ![image](https://github.com/user-attachments/assets/bb6d4ccb-7ead-4db0-84fd-f5c43e989c4c)
 
 Заказ отобразился, при этом заметим, что номер заказа у нас _не редактируется и не меняется_, то есть с точки зрения бизнес-логики это тот же самый заказ, в котором изменились некоторые поля.
+![image](https://github.com/user-attachments/assets/ecbbc533-71b8-44b6-bd57-2e4f0ea95346)
+
+В базе данных изменения также отображаются:
+![image](https://github.com/user-attachments/assets/07975d8e-81c7-4451-b370-fc715e1b9bd8)
 
 
 
