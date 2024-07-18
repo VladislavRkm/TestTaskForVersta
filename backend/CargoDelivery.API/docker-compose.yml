@@ -1,0 +1,16 @@
+﻿services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: "C_delivery"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+    - postgres-data:/var/lib/postgresql/data
+
+    ports:
+    - "5432:5432"
+
+volumes:
+  postgres-data:

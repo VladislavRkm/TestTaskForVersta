@@ -1,0 +1,37 @@
+﻿@page "{id:Guid}"
+@model RazorPagesApp.Pages.ReadModel
+
+<h2>Просмотр заказа</h2>
+
+<form method="get">
+    <input name="id" value="@Model.order.Id" type="hidden" />
+    <p>
+        <label>Номер заказа</label><br />
+        <input name="orderNumber" value="@Model.order.OrderNumber" />
+    </p>
+    <p>
+        <label>Город отправителя</label><br />
+        <input name="senderCity" value="@Model.order?.SenderCity" />
+    </p>
+    <p>
+        <label>Адрес отправителя</label><br />
+        <input name="senderAddress" value="@Model.order.SenderAddress" />
+    </p>
+    <p>
+        <label>Город получателя</label><br />
+        <input name="recipientCity" value="@Model.order.RecipientCity" />
+    </p>
+    <p>
+        <label>Адрес получателя</label><br />
+        <input name="recipientAddress" value="@Model.order.RecipientAddress" />
+    </p>
+    <p>
+        <label>Вес</label><br />
+        <input name="weight" value="@Model.order.Weight" type="number" />
+    </p>
+    <p>
+        <label>Дата забора груза</label><br />
+        <input name="pickUpDate" value="@Model.order.PickUpDate" type="text" />
+    </p>
+    <input type="submit" value="Закрыть" />
+</form>

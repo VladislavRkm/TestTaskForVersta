@@ -1,0 +1,28 @@
+﻿@page
+@model RazorPagesApp.Pages.CreateModel
+
+<h2>Создание нового заказа</h2>
+<form method="post">
+    <p>
+        <label>Город отправителя</label><br />
+        <input name="senderCity" type="text"/>
+    </p>
+    <p>
+        <label>Адрес отправителя</label><br />
+        <input name="senderAddress" type="text" />
+    </p>
+        <label>Город получателя</label><br />
+        <input name="recipientCity" type="text" />
+    </p>
+        <label>Адрес получателя</label><br />
+        <input name="recipientAddress" type="text" />
+    </p>
+    <p>
+        <label>Вес:</label><br />
+        <input name="weight" type="number" />
+    </p>
+        <label>Дата забора груза</label><br />
+        <input name="pickUpDate" type="datetime-local" />
+    </p>
+    <input type="submit" value="Отправить" />
+</form>
