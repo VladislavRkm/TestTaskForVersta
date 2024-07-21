@@ -42,23 +42,23 @@ public class Order
         var error = string.Empty;
         if (string.IsNullOrEmpty(senderCity) || senderCity.Length > MAX_GEO_LENGTH)
         {
-            error = "Sender's city can not be empty or longer than 250 symbols";
+            error = "Sender's city can not be empty or longer than 250 symbols!";
         }
         else if (string.IsNullOrEmpty(senderAddress) || senderAddress.Length > MAX_GEO_LENGTH)
         {
-            error = "Sender's address can not be empty or longer than 250 symbols";
+            error = "Sender's address can not be empty or longer than 250 symbols!";
         }
         else if (string.IsNullOrEmpty(recipientCity) || recipientCity.Length > MAX_GEO_LENGTH)
         {
-            error = "Recipient's city can not be empty or longer than 250 symbols";
+            error = "Recipient's city can not be empty or longer than 250 symbols!";
         }
         else if (string.IsNullOrEmpty(recipientAddress) || recipientAddress.Length > MAX_GEO_LENGTH)
         {
-            error = "Recipient's address can not be empty or longer than 250 symbols";
+            error = "Recipient's address can not be empty or longer than 250 symbols!";
         }
         else if (weight <= 0)
         {
-            error = "Cargo's weight can not be less than or equal to zero";
+            error = "The weight can not be lower or equal to zero!";
         }
         var order = new Order(id, senderCity, senderAddress, recipientCity, recipientAddress, weight, pickUpDate);
         return (order, error);

@@ -33,7 +33,7 @@ namespace CargoDelivery.DataAccess.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("PickUpDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("RecipientAddress")
                         .IsRequired()

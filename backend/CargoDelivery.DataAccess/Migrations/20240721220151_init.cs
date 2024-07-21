@@ -22,7 +22,7 @@ namespace CargoDelivery.DataAccess.Migrations
                     RecipientCity = table.Column<string>(type: "text", nullable: false),
                     RecipientAddress = table.Column<string>(type: "text", nullable: false),
                     Weight = table.Column<float>(type: "real", nullable: false),
-                    PickUpDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    PickUpDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {
