@@ -18,7 +18,7 @@ ___
 ## Стек технологий:
 
 * ASP.NET 8 на backend
-* Razor Pages
+* React.js, Vite, Tailwind CSS, Chakra UI
 * Entity Framework
 * PostgreSQL
 * Docker
@@ -55,62 +55,49 @@ ___
 ___
 
 ## Frontend:
+В предыдущей версии проекта я использовал библиотеку Razor Pages. Решил отказаться от неё, так как Razor и Blazor больше используются в MVC проектах. Во-первых, мой проект написан на луковой архитектуре, а используя Razor, её смысл теряется. Во-вторых, MVC имеет большие проблемы с масштабированием, а я хотел бы, чтобы реализация была приближенной к коммерческому коду.
+Для запуска фронтенд-части откройте папку с проектом в VS Code и введите следующие команды:
+```
+cd .\cg_delivery\
+```
+и
+```
+npm run dev
+```
 Главная страница выглядит следующим образом. Мы можем увидеть кнопку для формирования нового заказа и форму для просмотра уже существующих заказов (пока что она пуста):
 
-![image](https://github.com/user-attachments/assets/997906dc-ab77-48f9-b29e-9870da7f7b07)
+![image](https://github.com/user-attachments/assets/98715e0a-2902-4226-a480-5e4d4d2d13a4)
 
 Убедимся, что наша база данных также пуста и перейдём к ручному тестированию функционала страницы.
 
-![image](https://github.com/user-attachments/assets/5b2ec1cb-35a7-4e27-8d13-a933d150d421)
+![image](https://github.com/user-attachments/assets/b3b82ac8-ef57-4acc-8d7a-b627ffc88ce0)
+
 ___
-Создадим новый заказ, нажимаем кнопку "Отправить". Возращаемся на главную станицу и видим, что заказ отобразился.
-![image](https://github.com/user-attachments/assets/1cd30de6-62d4-43db-870e-eb0c99e0ba12)
-![image](https://github.com/user-attachments/assets/ba0b8325-d65a-41b2-a635-03ffb5a38973)
+Создадим новый заказ, нажимаем кнопку "Отправить". Сейчас он появится в форме для отображения заказов.
+![image](https://github.com/user-attachments/assets/00df9c48-dabc-4568-98f4-f343b6551b2d)
+
+![image](https://github.com/user-attachments/assets/a1645026-7284-457e-b7e7-ffa532b2d121)
+
 
 Проверим его наличие в БД:
-![image](https://github.com/user-attachments/assets/224a4216-a08d-4151-a4bb-fa5fa5285177)
+![image](https://github.com/user-attachments/assets/8a75f32a-6632-4553-bdcf-84f50dfa0445)
+
 
 Видим, что заказ отобразился и все данные совпадают с тем, что отражено на странице.
 ___
-Перейдём к тестированию кнопок "Просмотр заказа", "Редактировать", "Удалить":
+В предыдущей версии были реализованы кнопки для редактирования и удаления заказа. В данной версии их нет. С точки зрения бизнес-логики, у клиента не должно быть возможности редактирования и удаления заказа после его создания. В любом маркетплейсе или интернет-магазине подобные вещи делаются через поддержку.
+Поэтому получим наш заказ на бэкенде и отредактируем его.
 
-Просмотр осуществляется в режиме чтения. Открываем заказ, попробуем стереть введённые данные:
-![image](https://github.com/user-attachments/assets/bf404dc5-5cee-4ffb-9ea8-9989e7076f4a)
+![image](https://github.com/user-attachments/assets/468f29fd-3427-4cd6-a343-b81650fc369a)
 
-Нажимаем кнопку закрыть и всё возвращается на свои места:
-![image](https://github.com/user-attachments/assets/f5cf7bea-d3f1-4273-944c-667c6b5081ec)
-___
+Убедимся, что наш заказ получен, скопируем id и внесём изменения.
+![image](https://github.com/user-attachments/assets/63fd863f-dd10-4b0b-a6ef-e0fbb5b86b53)
 
-Теперь отредактируем наш заказ:
-![image](https://github.com/user-attachments/assets/bb6d4ccb-7ead-4db0-84fd-f5c43e989c4c)
+Перейдём на наш сайт и увидим, что изменения отобразились
+![image](https://github.com/user-attachments/assets/1121e85c-f27c-49c2-a63e-5e1ba5bfd30b)
 
-Заказ отобразился, при этом заметим, что номер заказа у нас _не редактируется и не меняется_, то есть с точки зрения бизнес-логики это тот же самый заказ, в котором изменились некоторые поля.
-![image](https://github.com/user-attachments/assets/ecbbc533-71b8-44b6-bd57-2e4f0ea95346)
 
-В базе данных изменения также отображаются:
-![image](https://github.com/user-attachments/assets/07975d8e-81c7-4451-b370-fc715e1b9bd8)
-___
 
-Давайте теперь удалим наш заказ. Для этого воспользуемся кнопкой "Удалить".
-![image](https://github.com/user-attachments/assets/feec350c-2542-4a53-b6b8-d4585a98dc51)
-
-Из базы данных запись удаляется соответственно:
-![image](https://github.com/user-attachments/assets/2c8d6622-7766-4b8b-a012-65ff7f3dc977)
-___
-Теперь проверим синхронизацию бэкенда и фронтенда. Создадим какой-нибудь заказ через Swagger UI.
-![image](https://github.com/user-attachments/assets/2cbc660b-5a27-46a6-ae19-ec1f84619986)
-Обновим страницу и увидим заказ на нашей страничке:
-
-![image](https://github.com/user-attachments/assets/21bf185a-d473-435b-8eca-c5408e37c556)
-___
-Теперь в обратную сторону, проверим как работают http-запросы с заказами, созданными через Razor Pages.
-![image](https://github.com/user-attachments/assets/37ecdbee-ee90-4d59-b253-8531e0474239)
-![image](https://github.com/user-attachments/assets/424f9451-5918-47b9-9deb-8d256ead09a7)
-
-Выполняем GET-запрос в Swagger UI и он нам возвращает наши заказы.
-![image](https://github.com/user-attachments/assets/caebeab5-1699-4ce3-a430-9eac87b128dc)
-
-Остальные запросы выполнять не будем, так как очевидно, что они будут работать.
 ___
 Подведём итоги.
 Технические требования к реализации:
@@ -122,7 +109,7 @@ ___
 Технологии:
 
 - [x] ASP.NET 8 на backend
-- [ ] React.JS (предпочтительно) на front
+- [x] React.JS (предпочтительно) на front
 - [x] Razor Pages на front
 - [x] Entity Framework
 - [x] Docker (дополнительно)
